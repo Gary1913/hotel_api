@@ -37,5 +37,5 @@ public class Factura {
     private BigDecimal valorNoche;
 
     @Column(nullable = false, updatable = false, precision = 14, scale = 2)
-    private BigDecimal ValorTotal;
+    private BigDecimal valorTotal;
 }
