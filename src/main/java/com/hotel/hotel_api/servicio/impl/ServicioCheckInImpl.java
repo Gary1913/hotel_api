@@ -42,10 +42,8 @@ public class ServicioCheckInImpl implements ServicioCheckIn {
                     "El cliente " + cliente.getNombreCompleto() + " ya tiene un hospedaje activo");
         }
 
-
         Habitacion habitacion = repositorioHabitacion
-                .findFirstByTipoHabitacionAndEstadoOrderByNumeroHabitacionAsc(
-                        request.getTipoHabitacion(), EstadoHabitacion.DISPONIBLE)
+                .buscarDisponibleParaCheckIn(request.getTipoHabitacion().name())
                 .orElseThrow(() -> new HabitacionNoDisponibleException(
                         "No existen habitaciones disponibles para el tipo " + request.getTipoHabitacion()));
 
