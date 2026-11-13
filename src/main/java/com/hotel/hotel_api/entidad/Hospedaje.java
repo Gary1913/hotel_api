@@ -28,10 +28,10 @@ public class Hospedaje {
     private Habitacion habitacion;
 
     @Column(nullable = false)
-    private LocalDateTime fechaIngreso;
+    private LocalDateTime fechaHoraIngreso;
 
-    @Column(nullable = false)
-    private LocalDateTime fechaSalida;
+
+    private LocalDateTime fechaHoraSalida;
 
     @Column(nullable = false)
     private Boolean activo;
